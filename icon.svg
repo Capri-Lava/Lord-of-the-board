@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#081634"/>
+      <stop offset=".5" stop-color="#1f5fc8"/>
+      <stop offset="1" stop-color="#7cc8ff"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="390" cy="120" r="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff6c8" stop-opacity=".95"/>
+      <stop offset=".25" stop-color="#ffd76a" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#ffd76a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="snow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#cfe2f7"/>
+    </linearGradient>
+    <linearGradient id="board" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffd84a"/>
+      <stop offset="1" stop-color="#ff9f1a"/>
+    </linearGradient>
+    <linearGradient id="jacket" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff7a3a"/>
+      <stop offset="1" stop-color="#e8431f"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#sky)"/>
+  <circle cx="390" cy="120" r="150" fill="url(#sun)"/>
+  <circle cx="390" cy="120" r="30" fill="#fff8dc"/>
+  <!-- góry w tle -->
+  <path d="M0 300 L70 215 L120 250 L205 150 L265 215 L300 190 L380 260 L450 205 L512 245 L512 512 L0 512 Z" fill="#a9c9ee"/>
+  <path d="M205 150 L232 180 L218 178 L205 192 L190 172 Z M450 205 L470 222 L455 222 Z M70 215 L88 236 L72 232 Z" fill="#ffffff"/>
+  <!-- stok -->
+  <path d="M0 292 C150 300 330 345 512 430 L512 512 L0 512 Z" fill="url(#snow)"/>
+  <!-- ślad po carvingu -->
+  <path d="M40 512 C70 450 120 420 175 392" fill="none" stroke="#9fbde4" stroke-width="10" stroke-linecap="round"/>
+  <!-- bramki -->
+  <g>
+    <line x1="76" y1="236" x2="76" y2="300" stroke="#1b2236" stroke-width="5" stroke-linecap="round"/>
+    <line x1="112" y1="240" x2="112" y2="304" stroke="#1b2236" stroke-width="5" stroke-linecap="round"/>
+    <path d="M76 240 L112 244 L112 274 L76 270 Z" fill="#2f6fe4"/>
+    <line x1="410" y1="300" x2="410" y2="420" stroke="#1b2236" stroke-width="7" stroke-linecap="round"/>
+    <line x1="472" y1="312" x2="472" y2="432" stroke="#1b2236" stroke-width="7" stroke-linecap="round"/>
+    <path d="M410 304 L472 316 L472 366 L410 354 Z" fill="#e63946"/>
+    <path d="M422 318 L460 325" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+  </g>
+  <!-- pył spod deski -->
+  <g fill="#ffffff">
+    <circle cx="150" cy="378" r="24" opacity=".95"/>
+    <circle cx="120" cy="352" r="18" opacity=".9"/>
+    <circle cx="96" cy="322" r="13" opacity=".85"/>
+    <circle cx="140" cy="335" r="11" opacity=".8"/>
+    <circle cx="78" cy="292" r="8" opacity=".75"/>
+    <circle cx="112" cy="300" r="7" opacity=".7"/>
+    <circle cx="66" cy="262" r="5" opacity=".65"/>
+    <circle cx="176" cy="356" r="12" opacity=".9"/>
+  </g>
+  <!-- deska -->
+  <g transform="rotate(-20 262 352)">
+    <rect x="150" y="334" width="224" height="36" rx="18" fill="#0b1a33"/>
+    <rect x="158" y="340" width="208" height="24" rx="12" fill="url(#board)"/>
+    <rect x="200" y="338" width="14" height="28" rx="4" fill="#0b1a33"/>
+    <rect x="300" y="338" width="14" height="28" rx="4" fill="#0b1a33"/>
+  </g>
+  <!-- zawodnik -->
+  <g stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="M318 322 L304 278 L262 258" stroke="#13244a" stroke-width="30"/>
+    <path d="M214 362 L222 304 L262 258" stroke="#13244a" stroke-width="30"/>
+    <path d="M262 256 L292 192" stroke="url(#jacket)" stroke-width="46"/>
+    <path d="M294 200 L340 238 L376 226" stroke="url(#jacket)" stroke-width="18"/>
+    <path d="M282 196 L236 182 L204 200" stroke="url(#jacket)" stroke-width="18"/>
+  </g>
+  <circle cx="378" cy="225" r="11" fill="#13244a"/>
+  <circle cx="202" cy="202" r="11" fill="#13244a"/>
+  <circle cx="306" cy="150" r="30" fill="#ffffff"/>
+  <path d="M306 120 A30 30 0 0 1 336 150 L276 150 A30 30 0 0 1 306 120 Z" fill="#e8f0ff"/>
+  <rect x="300" y="140" width="40" height="17" rx="8" fill="#ff9f1a" stroke="#0b1a33" stroke-width="4"/>
+</svg>

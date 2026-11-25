@@ -1,77 +1,66 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#081634"/>
-      <stop offset=".5" stop-color="#1f5fc8"/>
-      <stop offset="1" stop-color="#7cc8ff"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a1b3d"/>
+      <stop offset=".55" stop-color="#4b1f8a"/>
+      <stop offset="1" stop-color="#b0278f"/>
     </linearGradient>
-    <radialGradient id="sun" cx="390" cy="120" r="150" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#fff6c8" stop-opacity=".95"/>
-      <stop offset=".25" stop-color="#ffd76a" stop-opacity=".55"/>
-      <stop offset="1" stop-color="#ffd76a" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="snow" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#cfe2f7"/>
+    <linearGradient id="lens" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b1140"/>
+      <stop offset=".45" stop-color="#5a2bd6"/>
+      <stop offset=".8" stop-color="#ff2e88"/>
+      <stop offset="1" stop-color="#ff901f"/>
     </linearGradient>
-    <linearGradient id="board" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#ffd84a"/>
-      <stop offset="1" stop-color="#ff9f1a"/>
+    <linearGradient id="frame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff5aa5"/>
+      <stop offset="1" stop-color="#e0136f"/>
     </linearGradient>
-    <linearGradient id="jacket" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#ff7a3a"/>
-      <stop offset="1" stop-color="#e8431f"/>
-    </linearGradient>
+    <clipPath id="lc">
+      <path d="M100 198 Q100 170 130 168 L382 168 Q412 170 412 198 L412 294 Q412 328 382 330 L318 330 Q302 330 294 316 L282 296 Q256 262 230 296 L218 316 Q210 330 194 330 L130 330 Q100 328 100 294 Z"/>
+    </clipPath>
   </defs>
-  <rect width="512" height="512" fill="url(#sky)"/>
-  <circle cx="390" cy="120" r="150" fill="url(#sun)"/>
-  <circle cx="390" cy="120" r="30" fill="#fff8dc"/>
-  <!-- góry w tle -->
-  <path d="M0 300 L70 215 L120 250 L205 150 L265 215 L300 190 L380 260 L450 205 L512 245 L512 512 L0 512 Z" fill="#a9c9ee"/>
-  <path d="M205 150 L232 180 L218 178 L205 192 L190 172 Z M450 205 L470 222 L455 222 Z M70 215 L88 236 L72 232 Z" fill="#ffffff"/>
-  <!-- stok -->
-  <path d="M0 292 C150 300 330 345 512 430 L512 512 L0 512 Z" fill="url(#snow)"/>
-  <!-- ślad po carvingu -->
-  <path d="M40 512 C70 450 120 420 175 392" fill="none" stroke="#9fbde4" stroke-width="10" stroke-linecap="round"/>
-  <!-- bramki -->
+  <rect width="512" height="512" fill="url(#bg)"/>
+  <!-- iskierki -->
+  <g fill="#ffd319">
+    <path d="M86 86 l6 18 18 6 -18 6 -6 18 -6 -18 -18 -6 18 -6z"/>
+    <path d="M420 410 l5 14 14 5 -14 5 -5 14 -5 -14 -14 -5 14 -5z"/>
+  </g>
+  <g fill="#ffffff" opacity=".85">
+    <circle cx="410" cy="92" r="5"/><circle cx="452" cy="132" r="3"/><circle cx="70" cy="420" r="4"/>
+    <circle cx="120" cy="450" r="3"/><circle cx="360" cy="60" r="3"/><circle cx="160" cy="70" r="3"/>
+  </g>
+  <!-- tęczowy pasek gogli -->
   <g>
-    <line x1="76" y1="236" x2="76" y2="300" stroke="#1b2236" stroke-width="5" stroke-linecap="round"/>
-    <line x1="112" y1="240" x2="112" y2="304" stroke="#1b2236" stroke-width="5" stroke-linecap="round"/>
-    <path d="M76 240 L112 244 L112 274 L76 270 Z" fill="#2f6fe4"/>
-    <line x1="410" y1="300" x2="410" y2="420" stroke="#1b2236" stroke-width="7" stroke-linecap="round"/>
-    <line x1="472" y1="312" x2="472" y2="432" stroke="#1b2236" stroke-width="7" stroke-linecap="round"/>
-    <path d="M410 304 L472 316 L472 366 L410 354 Z" fill="#e63946"/>
-    <path d="M422 318 L460 325" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity=".8"/>
+    <rect x="0" y="214" width="512" height="12" fill="#ff2e88"/>
+    <rect x="0" y="226" width="512" height="12" fill="#ff901f"/>
+    <rect x="0" y="238" width="512" height="12" fill="#ffd319"/>
+    <rect x="0" y="250" width="512" height="12" fill="#3ee8a5"/>
+    <rect x="0" y="262" width="512" height="12" fill="#2de2e6"/>
+    <rect x="0" y="274" width="512" height="12" fill="#7b2ff7"/>
+    <rect x="0" y="210" width="512" height="4" fill="#2a1b3d"/>
+    <rect x="0" y="286" width="512" height="4" fill="#2a1b3d"/>
   </g>
-  <!-- pył spod deski -->
-  <g fill="#ffffff">
-    <circle cx="150" cy="378" r="24" opacity=".95"/>
-    <circle cx="120" cy="352" r="18" opacity=".9"/>
-    <circle cx="96" cy="322" r="13" opacity=".85"/>
-    <circle cx="140" cy="335" r="11" opacity=".8"/>
-    <circle cx="78" cy="292" r="8" opacity=".75"/>
-    <circle cx="112" cy="300" r="7" opacity=".7"/>
-    <circle cx="66" cy="262" r="5" opacity=".65"/>
-    <circle cx="176" cy="356" r="12" opacity=".9"/>
+  <!-- oprawka -->
+  <path d="M72 194 Q72 142 124 140 L388 140 Q440 142 440 194 L440 300 Q440 356 386 358 L312 358 Q290 358 278 340 L268 324 Q256 308 244 324 L234 340 Q222 358 200 358 L126 358 Q72 356 72 300 Z"
+        fill="url(#frame)" stroke="#2a1b3d" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M96 170 Q100 158 124 156 L388 156" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity=".55"/>
+  <!-- szyba z lustrzanym odbiciem -->
+  <g clip-path="url(#lc)">
+    <rect x="90" y="160" width="330" height="180" fill="url(#lens)"/>
+    <g fill="none" stroke-width="13" opacity=".9">
+      <circle cx="140" cy="430" r="250" stroke="#ff2e88"/>
+      <circle cx="140" cy="430" r="237" stroke="#ff901f"/>
+      <circle cx="140" cy="430" r="224" stroke="#ffd319"/>
+      <circle cx="140" cy="430" r="211" stroke="#3ee8a5"/>
+      <circle cx="140" cy="430" r="198" stroke="#2de2e6"/>
+      <circle cx="140" cy="430" r="185" stroke="#7b2ff7"/>
+    </g>
+    <path d="M90 300 L170 250 L220 280 L300 220 L420 300 L420 340 L90 340 Z" fill="#ffffff" opacity=".18"/>
+    <path d="M120 196 L170 196 L130 250 L104 250 Z" fill="#ffffff" opacity=".55"/>
+    <path d="M182 196 L200 196 L160 250 L142 250 Z" fill="#ffffff" opacity=".4"/>
   </g>
-  <!-- deska -->
-  <g transform="rotate(-20 262 352)">
-    <rect x="150" y="334" width="224" height="36" rx="18" fill="#0b1a33"/>
-    <rect x="158" y="340" width="208" height="24" rx="12" fill="url(#board)"/>
-    <rect x="200" y="338" width="14" height="28" rx="4" fill="#0b1a33"/>
-    <rect x="300" y="338" width="14" height="28" rx="4" fill="#0b1a33"/>
-  </g>
-  <!-- zawodnik -->
-  <g stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <path d="M318 322 L304 278 L262 258" stroke="#13244a" stroke-width="30"/>
-    <path d="M214 362 L222 304 L262 258" stroke="#13244a" stroke-width="30"/>
-    <path d="M262 256 L292 192" stroke="url(#jacket)" stroke-width="46"/>
-    <path d="M294 200 L340 238 L376 226" stroke="url(#jacket)" stroke-width="18"/>
-    <path d="M282 196 L236 182 L204 200" stroke="url(#jacket)" stroke-width="18"/>
-  </g>
-  <circle cx="378" cy="225" r="11" fill="#13244a"/>
-  <circle cx="202" cy="202" r="11" fill="#13244a"/>
-  <circle cx="306" cy="150" r="30" fill="#ffffff"/>
-  <path d="M306 120 A30 30 0 0 1 336 150 L276 150 A30 30 0 0 1 306 120 Z" fill="#e8f0ff"/>
-  <rect x="300" y="140" width="40" height="17" rx="8" fill="#ff9f1a" stroke="#0b1a33" stroke-width="4"/>
+  <path d="M100 198 Q100 170 130 168 L382 168 Q412 170 412 198 L412 294 Q412 328 382 330 L318 330 Q302 330 294 316 L282 296 Q256 262 230 296 L218 316 Q210 330 194 330 L130 330 Q100 328 100 294 Z"
+        fill="none" stroke="#2a1b3d" stroke-width="6"/>
+  <!-- błysk -->
+  <path d="M372 186 l4 12 12 4 -12 4 -4 12 -4 -12 -12 -4 12 -4z" fill="#ffffff"/>
 </svg>

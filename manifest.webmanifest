@@ -1,6 +1,6 @@
 {
-  "name": "Lord of the Board",
-  "short_name": "LotB",
+  "name": "Board Lord",
+  "short_name": "Board Lord",
   "description": "Retro snowboardowy slalom: solo, split screen i wyścigi online.",
   "start_url": "./",
   "display": "fullscreen",
